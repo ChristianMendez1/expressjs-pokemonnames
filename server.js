@@ -9,7 +9,7 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('jsx-view-engine').createEngine());
 
 app.get('/', function(req, res){
-    res.send('Welcome to the Pokemon App!');
+    res.send(`<h1><a href='/pokemon'>Welcome to the Pokemon App!</a></h1>`);
 });   
 
 app.get('/pokemon', function(req, res){
