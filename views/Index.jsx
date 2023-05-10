@@ -1,8 +1,8 @@
 const React = require('react');
     
 const myStyle = {
-    color: '#ffffff',
-    backgroundColor: '#000000',
+    color: 'darkblue',
+    backgroundColor: 'lightgray',
     };
 
 class Index extends React.Component {
@@ -10,11 +10,14 @@ class Index extends React.Component {
         const { pokemon } = this.props;
         return (
             <div style={myStyle}>
+                <h1>See All The Pokemon</h1>
                 <ul>
                     {pokemon.map((pokemon, x) => {
                         return(
                             <a href={`/pokemon/${x}`}>
-                                <li>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</li>
+                                <li>
+                                    {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}                                
+                                </li>
                             </a>
                         )
                     })}
